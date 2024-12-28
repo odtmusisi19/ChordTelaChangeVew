@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "ChordTela",
+  "description": "Ekstensi untuk menjalankan script kustom pada halaman web",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://www.chordtela.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.chordtela.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
